@@ -19,7 +19,7 @@ size_t  ft_strlcpy(char *dst, const char *src, size_t size);   				// Copies a s
 size_t  ft_strlcat(char *dst, const char *src, size_t size);   				// Appends a string with size limit
 int     ft_toupper(int c);          										// Converts a character to uppercase
 int     ft_tolower(int c);          										// Converts a character to lowercase
-char    *ft_strchr(const char *s, int c);   								// Finds the first occurrence of a character in a string
+const char    *ft_strchr(const char *s, int c);   								// Finds the first occurrence of a character in a string
 char    *ft_strrchr(const char *s, int c);  								// Finds the last occurrence of a character in a string
 int     ft_strncmp(const char *s1, const char *s2, size_t n);  				// Compares two strings (up to n characters)
 char    *ft_strnstr(const char *haystack, const char *needle, size_t len);  // Finds the first occurrence of a substring in a string (up to n characters)

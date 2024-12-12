@@ -5,25 +5,26 @@ void *ft_memmove(void *dst, const void *src, size_t len)
     unsigned char *d = dst;
     const unsigned char *s = src;
 
-    if (!dst && !src)
+    if (!dst || !src)
         return NULL;
 
     // Backward copy
     if (d > s)
     {
-        d += len;
-        s += len;
+        d += len - 1;
+        s += len - 1;
         while (len--)
         {
             *d-- = *s--;
         }
     }
-
-    // Forward copy
-    while (len--)
+    else
     {
-        *d++ = *s++;
+    	// Forward copy
+    	while (len--)
+    	{
+        	*d++ = *s++;
+    	}
     }
-
-    return dst;
+    	return dst;
 }
