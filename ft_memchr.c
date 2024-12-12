@@ -1,15 +1,29 @@
-# include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmaterna <mmaterna@student.42warsaw.pl>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/12 19:04:50 by mmaterna          #+#    #+#             */
+/*   Updated: 2024/12/12 19:04:53 by mmaterna         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void    *ft_memchr(const void *s, int c, size_t n)
+#include "libft.h"
+
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-    unsigned char *i = (unsigned char *)s;
-    unsigned char j = (unsigned char)c;
+	unsigned char	*i;
+	unsigned char	j;
 
-    while (n--)
-    {
-        if (*i == j)
-            return (i);
-        i++;
-    }
-    return NULL;
+	i = (unsigned char *) s;
+	j = (unsigned char) c;
+	while (n--)
+	{
+		if (*i == j)
+			return (i);
+		i++;
+	}
+	return (NULL);
 }

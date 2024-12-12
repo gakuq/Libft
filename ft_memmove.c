@@ -1,30 +1,41 @@
-# include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmaterna <mmaterna@student.42warsaw.pl>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/12 19:16:22 by mmaterna          #+#    #+#             */
+/*   Updated: 2024/12/12 19:16:24 by mmaterna         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void *ft_memmove(void *dst, const void *src, size_t len)
+#include "libft.h"
+
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-    unsigned char *d = dst;
-    const unsigned char *s = src;
+	unsigned char		*d;
+	const unsigned char	*s;
 
-    if (!dst || !src)
-        return NULL;
-
-    // Backward copy
-    if (d > s)
-    {
-        d += len - 1;
-        s += len - 1;
-        while (len--)
-        {
-            *d-- = *s--;
-        }
-    }
-    else
-    {
-    	// Forward copy
-    	while (len--)
-    	{
-        	*d++ = *s++;
-    	}
-    }
-    	return dst;
+	d = dst;
+	s = src;
+	if (!dst || !src)
+		return (NULL);
+	if (d > s)
+	{
+		d += len - 1;
+		s += len - 1;
+		while (len--)
+		{
+			*d-- = *s--;
+		}
+	}
+	else
+	{
+		while (len--)
+		{
+			*d++ = *s++;
+		}
+	}
+	return (dst);
 }
