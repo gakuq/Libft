@@ -6,7 +6,7 @@
 /*   By: mmaterna <mmaterna@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 19:20:49 by mmaterna          #+#    #+#             */
-/*   Updated: 2024/12/12 19:20:50 by mmaterna         ###   ########.fr       */
+/*   Updated: 2024/12/17 15:34:52 by mmaterna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	if (*needle == '\0')
 		return ((char *)haystack);
 	i = 0;
-	while (len-- && haystack[i])
+	while (i < len && haystack[i])
 	{
 		j = 0;
-		while (haystack[i + j] == needle[j] && (i + j) < len)
+		while (i + j < len && haystack[i + j] == needle[j])
 		{
-			j++;
-			if (needle[j] == '\0')
+			if (needle[j + 1] == '\0')
 				return ((char *)haystack + i);
+			j++;
 		}
 		i++;
 	}

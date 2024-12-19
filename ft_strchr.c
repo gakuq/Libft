@@ -6,7 +6,7 @@
 /*   By: mmaterna <mmaterna@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 18:27:01 by mmaterna          #+#    #+#             */
-/*   Updated: 2024/12/12 18:27:17 by mmaterna         ###   ########.fr       */
+/*   Updated: 2024/12/17 14:45:05 by mmaterna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ char	*ft_strchr(const char *s, int c)
 	while (*s)
 	{
 		if (*s == (unsigned char)c)
-			return (s);
+			return ((char *)s);
 		s++;
 	}
 	if ((char)c == '\0')
-		return (s);
+		return ((char *)s);
 	return (NULL);
 }

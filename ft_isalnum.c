@@ -6,13 +6,13 @@
 /*   By: mmaterna <mmaterna@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 19:21:00 by mmaterna          #+#    #+#             */
-/*   Updated: 2024/12/12 19:21:01 by mmaterna         ###   ########.fr       */
+/*   Updated: 2024/12/17 14:38:51 by mmaterna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(char c)
+int	ft_isalnum(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);

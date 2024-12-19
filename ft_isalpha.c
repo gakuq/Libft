@@ -6,13 +6,13 @@
 /*   By: mmaterna <mmaterna@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 19:26:03 by mmaterna          #+#    #+#             */
-/*   Updated: 2024/12/12 19:26:05 by mmaterna         ###   ########.fr       */
+/*   Updated: 2024/12/17 14:38:56 by mmaterna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);

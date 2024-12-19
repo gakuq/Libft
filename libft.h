@@ -6,7 +6,7 @@
 /*   By: mmaterna <mmaterna@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 18:53:00 by mmaterna          #+#    #+#             */
-/*   Updated: 2024/12/12 18:53:02 by mmaterna         ###   ########.fr       */
+/*   Updated: 2024/12/19 16:17:36 by mmaterna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 
 void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(const char *s, int fd);
-void	ft_putendl_fd(const char *s, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
 #endif

@@ -6,13 +6,13 @@
 /*   By: mmaterna <mmaterna@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 19:20:36 by mmaterna          #+#    #+#             */
-/*   Updated: 2024/12/12 19:20:37 by mmaterna         ###   ########.fr       */
+/*   Updated: 2024/12/17 14:39:00 by mmaterna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(char c)
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);
