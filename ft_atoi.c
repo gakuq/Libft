@@ -17,18 +17,17 @@ int	ft_atoi(const char *str)
 	int	result;
 	int	sign;
 
-	if (!str)
-		return (0);
 	result = 0;
 	sign = 1;
-	while ((*str >= '\t' && *str <= '\r') || *str == ' ')
-		str++;
-	if (*str == '-' || *str == '+')
+	while ((*str >= '\t' && *str <= '\r') || *str == 32)
+		str++;	
+	if (*str == '-')
 	{
-		if (*str == '-')
-			sign = -1;
+		sign = -1;
 		str++;
 	}
+	else if (*str == '+')
+		str++;
 	while (*str >= '0' && *str <= '9')
 	{
 		result = result * 10 + (*str - '0');
